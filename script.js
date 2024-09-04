@@ -175,7 +175,7 @@ eventTitleNode.addEventListener("mouseenter", () => {
   eventTitleNode.style.padding = "20px"
 
 })
-
+  
 eventTitleNode.addEventListener("click", () => {
 
   eventTitleNode.innerText = "Clickando"
