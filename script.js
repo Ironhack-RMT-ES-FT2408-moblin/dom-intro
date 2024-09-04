@@ -126,13 +126,76 @@ addBtnNode.addEventListener("click", () => {
   console.log(inputNode.value)
   // ulNode.innerText = inputNode.value
 
-  // 2. como puedo yo crear un nuevo elemento
-  const nuevoLiNode = document.createElement("li") // crearlo de cero
-  nuevoLiNode.innerText = inputNode.value
-  console.log(nuevoLiNode)
+  // Forma 1 de añadir y crear elementos al DOM
+  // // 2. como puedo yo crear un nuevo elemento
+  // const nuevoLiNode = document.createElement("li") // crearlo de cero
+  // nuevoLiNode.innerText = inputNode.value
+  // console.log(nuevoLiNode)
 
-  // 3. como puedo yo agregar un elemento al DOM
-  ulNode.append(nuevoLiNode)
-  // sintaxis del appends. aDondeQueremosAñadir.append(loQueQueremosAñadir)
+  // // 3. como puedo yo agregar un elemento al DOM
+  // ulNode.append(nuevoLiNode)
+  // // sintaxis del appends. aDondeQueremosAñadir.append(loQueQueremosAñadir)
+
+  // Forma 2 de añadir y crear elementos al DOM
+  ulNode.innerHTML += `<li>${inputNode.value}</li>`
+
+  inputNode.value = ""
+
+})
+
+
+// Cambiando clases y estilos
+
+const finalSectionNode = document.querySelector("#final-section")
+
+finalSectionNode.addEventListener("click", () => {
+
+  console.log(finalSectionNode.className)
+  // finalSectionNode.className = "container red-container"
+
+  console.log(finalSectionNode.classList)
+  // finalSectionNode.classList.remove("blue-container") // remueve
+  // finalSectionNode.classList.add("red-container") // añade
+
+  finalSectionNode.classList.toggle("blue-container") // añade si no existe. remueve si existe
+  finalSectionNode.classList.toggle("red-container")
+
+})
+
+const eventTitleNode = document.querySelector("#event-title")
+
+eventTitleNode.addEventListener("mouseenter", () => {
+
+  eventTitleNode.innerText = "otra cosa"
+  // Manipular directamente desde JS los estilos
+
+  // console.log(eventTitleNode.style)
+  eventTitleNode.style.color = "red"
+  eventTitleNode.style.backgroundColor = "darkgreen"
+  eventTitleNode.style.padding = "20px"
+
+})
+
+eventTitleNode.addEventListener("click", () => {
+
+  eventTitleNode.innerText = "Clickando"
+  // Manipular directamente desde JS los estilos
+
+  // console.log(eventTitleNode.style)
+  eventTitleNode.style.color = "blue"
+  eventTitleNode.style.backgroundColor = "lightgreen"
+  eventTitleNode.style.padding = "30px"
+
+})
+
+eventTitleNode.addEventListener("mouseleave", () => {
+
+  eventTitleNode.innerText = "Cambiando estilos!"
+  // Manipular directamente desde JS los estilos
+
+  // console.log(eventTitleNode.style)
+  eventTitleNode.style.color = "black"
+  eventTitleNode.style.backgroundColor = "white"
+  eventTitleNode.style.padding = "0"
 
 })

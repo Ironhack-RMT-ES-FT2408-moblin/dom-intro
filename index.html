@@ -1,58 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  
-  <h1>Aprendiendo DOM</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Aprendiendo DOM</h1>
 
-  <h1 id="second-title" class="title blue">Este es otro h1 <span>con un span adentro</span></h1>
+    <h1 id="second-title" class="title blue">
+      Este es otro h1 <span>con un span adentro</span>
+    </h1>
 
-  <p class="some-text">Aqui tenemos un parrafo</p>
-  <p class="some-text">Pero aqui tenemos otro parrafo tambien</p>
-  <p class="some-text">Y por último, aqui un tercer parrafo</p>
+    <p class="some-text">Aqui tenemos un parrafo</p>
+    <p class="some-text">Pero aqui tenemos otro parrafo tambien</p>
+    <p class="some-text">Y por último, aqui un tercer parrafo</p>
 
-  <br />
+    <br />
 
-  <div class="card">
-    <h3>carta1</h3>
-    <p>parrafo1</p>
-  </div>
+    <div class="card">
+      <h3>carta1</h3>
+      <p>parrafo1</p>
+    </div>
 
-  <div class="card">
-    <h3>carta2</h3>
-    <p>parrafo2</p>
-  </div>
+    <div class="card">
+      <h3>carta2</h3>
+      <p>parrafo2</p>
+    </div>
 
-  <hr>
+    <hr />
 
-  <div id="count">
-    <h2>€<span>0</span></h2>
-    <button id="increment">Incrementar</button>
-  </div>
+    <div id="count">
+      <h2>€<span>0</span></h2>
+      <button id="increment">Incrementar</button>
+    </div>
 
-  <br>
-  
-  <button id="delete-btn">Borrame!</button>
+    <br />
 
-  <br>
-  <br>
+    <button id="delete-btn">Borrame!</button>
 
-  <div id="add-form">
-    <input id="name" type="text" value="" />
-    <button>Añadir</button>
+    <br />
+    <br />
 
-    <h3>Lista:</h3>
-    <ul id="add-list">
+    <div id="add-form">
+      <input id="name" type="text" value="" />
+      <button>Añadir</button>
 
-    </ul>
-  </div>
+      <h3>Lista:</h3>
+      <ul id="add-list"></ul>
+    </div>
 
-  <script src="./script.js"></script>
+    <section id="final-section" class="container blue-container">
+      <h2>Manipulando ids y clases!</h2>
+    </section>
 
-</body>
+    <h2 id="event-title">Cambiando estilos!</h2>
+
+    <button id="styles-btn">Click me</button>
+
+    <script src="./script.js"></script>
+  </body>
 </html>

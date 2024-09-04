@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  border: solid 2px black;
+}
+
+.blue-container {
+  background-color: lightseagreen;
+  color: rgb(53, 53, 53);
+}
+
+.red-container {
+  background-color: lightcoral;
+  color: darkred;
+}
