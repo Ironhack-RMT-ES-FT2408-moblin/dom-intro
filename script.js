@@ -64,3 +64,47 @@ cardNodeList.forEach((eachCardNode) => {
 const algo = document.querySelectorAll("p, div")
 console.log(algo)
 
+
+// Manipulación del DOM
+
+// const h1Node = document.querySelector("h1")
+console.log(h1Node.innerText)
+
+// h1Node.innerText = "Patata"
+
+// addEventListener programas que escuchan constantemente cuando una accion del usuario ocurre y nos permite ejecutar código en ese momento.
+h1Node.addEventListener("mouseenter", () => {
+  // console.log("pasando el cursor sobre el h1")
+  h1Node.innerText = "Otra cosa"
+})
+
+h1Node.addEventListener("mouseleave", () => {
+  // console.log("saliendo del h1")
+  h1Node.innerText = "Aprendiendo DOM"
+})
+
+const incrementBtnNode = document.querySelector("#increment")
+const countNode = document.querySelector("#count h2 span")
+
+incrementBtnNode.addEventListener("click", () => {
+  console.log("clickando")
+
+  // countNode.innerText = parseInt(countNode.innerText) + 1
+  countNode.innerText++
+
+})
+
+// Crear elementos y borrar elementos
+
+const deleteBtnNode = document.querySelector("#delete-btn")
+
+deleteBtnNode.addEventListener("click", () => {
+  console.log("clickando btn delete")
+
+  deleteBtnNode.remove() // NO es destruirlo. ES sacarlo de la visualización. Sacarlo del DOM
+  console.log(deleteBtnNode)
+
+  // ejemplo de remover todo el body
+  // document.querySelector("body").remove()
+
+})
