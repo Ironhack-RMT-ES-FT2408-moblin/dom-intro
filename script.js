@@ -108,3 +108,31 @@ deleteBtnNode.addEventListener("click", () => {
   // document.querySelector("body").remove()
 
 })
+
+const inputNode = document.querySelector("#name")
+const addBtnNode = document.querySelector("#add-form button")
+const ulNode = document.querySelector("#add-list")
+
+// console.log(inputNode)
+// console.log(addBtnNode)
+// console.log(ulNode)
+
+addBtnNode.addEventListener("click", () => {
+
+  // console.log("clickando")
+
+  // 1. como recibo yo lo que está escribiendo el usuario
+  // console.log(inputNode.innerText) // no funciona
+  console.log(inputNode.value)
+  // ulNode.innerText = inputNode.value
+
+  // 2. como puedo yo crear un nuevo elemento
+  const nuevoLiNode = document.createElement("li") // crearlo de cero
+  nuevoLiNode.innerText = inputNode.value
+  console.log(nuevoLiNode)
+
+  // 3. como puedo yo agregar un elemento al DOM
+  ulNode.append(nuevoLiNode)
+  // sintaxis del appends. aDondeQueremosAñadir.append(loQueQueremosAñadir)
+
+})
